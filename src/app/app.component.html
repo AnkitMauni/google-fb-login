@@ -1,9 +1,17 @@
 <asl-google-signin-button *ngIf="!user"></asl-google-signin-button>
 
-<div *ngIf="user">
-  <h1>
-Hello & Welcome Mr {{user.name}} with the confirmation from your email id : {{user.email}}
-  </h1>
+<div >
+  <div class="card">
+    <!-- <div class="card-body"> <img class="rounded" [src]="user.photoUrl" alt="Profile" /> -->
+      <h5 class="card-title">Welcome, {{user.name}}</h5>
+      <p class="card-text">Email ID: {{user.email}}</p>
+      <p class="card-text">First Name: {{user.firstName}}</p>
+      <p class="card-text">Last Name: {{user.lastName}}</p>
+      <p class="card-text">ID: {{user.id}}</p>
+      <p class="card-text">Provider: {{user.provider}}</p>
+      <!-- <a href="#" class="btn btn-danger btn-sm" (click)="signOut()"> Logout </a> -->
+    <!-- </div> -->
+  </div>
 
 </div>
 <div>
@@ -11,13 +19,14 @@ Hello & Welcome Mr {{user.name}} with the confirmation from your email id : {{us
 <button type="button" (click)="loginWithFacebook()">Signin with Facebook</button>
 </div>
 
-<!-- <div class="card">
-  <div class="card-body"> <img class="rounded" [src]="user.photoUrl" alt="Profile" />
-    <h5 class="card-title">Welcome, {{user.name}}</h5>
-    <p class="card-text">Email ID: {{user.email}}</p>
-    <p class="card-text">First Name: {{user.email}}</p>
-    <p class="card-text">Last Name: {{user.email}}</p>
-    <p class="card-text">ID: {{user.id}}</p>
-    <a href="#" class="btn btn-danger btn-sm" (click)="signOut()"> Logout </a>
-  </div>
-</div> -->
+<div class="card">
+  <!-- <div class="card-body"> <img class="rounded" [src]="user.photoUrl" alt="Profile" /> -->
+    <h5 class="card-title">Welcome, {{userfb.name}}</h5>
+    <p class="card-text">Email ID: {{userfb.email}}</p>
+    <p class="card-text">First Name: {{userfb.firstName}}</p>
+    <p class="card-text">Last Name: {{userfb.lastName}}</p>
+    <p class="card-text">ID: {{userfb.id}}</p>
+    <p class="card-text">Provider: {{user.provider}}</p>
+    <!-- <a href="#" class="btn btn-danger btn-sm" (click)="signOut()"> Logout </a> -->
+  <!-- </div> -->
+</div>

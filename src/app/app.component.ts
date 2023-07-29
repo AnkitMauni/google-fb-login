@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'angular-google';
   user: any;
   loggedIn: any;
+  userfb: any;
   constructor(private authService: SocialAuthService) { }
 
   ngOnInit() {
@@ -23,7 +24,8 @@ export class AppComponent {
   loginWithFacebook(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
       .then((user: any) => {
-        console.log("Facebook User",user);
+        this.userfb = user;
+        console.log("Facebook User",this.userfb);
         // You can now access user details like user.id, user.name, user.email, etc.
       })
       .catch(error => {
